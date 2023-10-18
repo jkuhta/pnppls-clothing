@@ -1,0 +1,9 @@
+.banner {
+  background: url("../../assets/banner-1.jpg");
+  background-size: cover;
+  height: 25vw;
+  width: 75vw;
+  margin: auto;
+  margin-top: 4rem;
+  transform: rotateY(180deg);
+}

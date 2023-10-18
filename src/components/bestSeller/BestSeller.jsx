@@ -1,0 +1,53 @@
+import React from "react";
+import "./BestSeller.css";
+import all_product from "../../assets/all_product";
+import Item from "../item/Item";
+import { Link } from "react-router-dom";
+
+const BestSeller = ({ category }) => {
+  const filteredAndSortedItems = all_product
+    .filter((item) => item.category === category) // Filter items by category
+    .sort((a, b) => b.rating - a.rating); // Sort by rating in descending order
+
+  const top4Items = filteredAndSortedItems.slice(0, 4);
+
+  return (
+    <div className="bestSeller">
+      <h1>best sellers</h1>
+      <div className="bestSeller-category">
+        <hr></hr>
+        <span>{category}</span>
+        <hr></hr>
+      </div>
+      <div className="bestSeller-all-btn-container">
+        <Link to={`/${category}`}>
+          <button className="bestSeller-all-btn">Shop All</button>
+        </Link>
+      </div>
+
+      <div className="bestSeller-items-container">
+        <div className="bestSeller-items">
+          {top4Items.map((item, index) => {
+            return (
+              item.category === category && (
+                <Item
+                  className="bestSeller-item"
+                  key={index}
+                  id={item.id}
+                  name={item.name}
+                  image={item.image}
+                  rating={item.rating}
+                  reviews={item.reviews}
+                  new_price={item.new_price}
+                  old_price={item.old_price}
+                ></Item>
+              )
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BestSeller;
