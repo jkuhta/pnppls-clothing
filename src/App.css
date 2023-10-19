@@ -1,1 +1,30 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --title-color: #20655f;
+  --subtitle-color: #f8aa27;
+  --container-color: #f8f4ed;
+}
 
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-bottom: 0.5rem;
+  color: var(--title-color);
+  font-family: "Young Serif";
+  display: inline;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.pineapples {
+  background: url("./assets/background.png");
+}

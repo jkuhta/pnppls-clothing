@@ -23,7 +23,7 @@
   width: 100%;
   padding: 18px 24px;
   background: #fdf6e7;
-  border: 1px solid #ebebeb;
+  border: 1px solid var(--container-color);
   border-radius: 4px;
   cursor: pointer;
 }

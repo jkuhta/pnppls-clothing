@@ -14,7 +14,7 @@ const ShopCategory = ({ category }) => {
   ); // Filter items by category
 
   const [selectedItem, setSelectedItem] = useState("featured");
-  const [sortedItems, setSortedItems] = useState(filtered_products);
+  const [sortedItems, setSortedItems] = useState(all_product);
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
@@ -33,7 +33,7 @@ const ShopCategory = ({ category }) => {
         price_down: "new_price",
       };
       const sortProperty = types[type];
-      const sorted = [...filtered_products].sort((a, b) =>
+      const sorted = [...all_product].sort((a, b) =>
         selectedItem === "price_up"
           ? a[sortProperty] - b[sortProperty]
           : b[sortProperty] - a[sortProperty]
@@ -42,11 +42,10 @@ const ShopCategory = ({ category }) => {
     };
 
     sortArray(selectedItem);
-    // eslint-disable-next-line
-  }, [selectedItem]);
+  }, [selectedItem, all_product]);
 
   return (
-    <div className="shop-category">
+    <div className="shop-category pineapples">
       <div className="shop-category-title">{category}'s Collection</div>
       <div className="shop-category-settings">
         <div className="shop-category-filter">
@@ -57,7 +56,7 @@ const ShopCategory = ({ category }) => {
         <div className="shop-category-settings-right">
           <div className="shop-category-count">
             <p>
-              {sortedItems.length} of {sortedItems.length} products
+              {filtered_products.length} of {filtered_products.length} products
             </p>
           </div>
           <div className="shop-category-sort">
@@ -71,7 +70,7 @@ const ShopCategory = ({ category }) => {
 
       <div className="shop-category-products">
         {sortedItems.map((item, index) => {
-          return <Item key={index} item={item} />;
+          return item.category === category && <Item key={index} item={item} />;
         })}
       </div>
       {/* <div className="shop-category-loadmore">Explore More</div> */}

@@ -7,7 +7,7 @@ import Newsletter from "../../components/newsletter/Newsletter";
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className="home pineapples">
       <Hero />
       <BestSeller category="men" />
       <Banner />
