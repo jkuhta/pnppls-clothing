@@ -9,15 +9,22 @@ import { useEffect } from "react";
 const ShopCategory = ({ category }) => {
   const { all_product } = useContext(ShopContext);
 
+  const filtered_products = all_product.filter(
+    (item) => item.category === category
+  ); // Filter items by category
+
   const [selectedItem, setSelectedItem] = useState("featured");
-  const [sortedItems, setSortedItems] = useState(all_product);
+  const [sortedItems, setSortedItems] = useState(filtered_products);
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
   };
 
+  const handleSort = (sorted) => {
+    setSortedItems(sorted);
+  };
+
   useEffect(() => {
-    console.log(selectedItem);
     const sortArray = (type) => {
       const types = {
         rating: "rating",
@@ -26,27 +33,32 @@ const ShopCategory = ({ category }) => {
         price_down: "new_price",
       };
       const sortProperty = types[type];
-      const sorted = [...all_product].sort((a, b) =>
+      const sorted = [...filtered_products].sort((a, b) =>
         selectedItem === "price_up"
           ? a[sortProperty] - b[sortProperty]
           : b[sortProperty] - a[sortProperty]
       );
-      setSortedItems(sorted);
+      handleSort(sorted);
     };
 
     sortArray(selectedItem);
-  }, [selectedItem, all_product]);
+    // eslint-disable-next-line
+  }, [selectedItem]);
 
   return (
     <div className="shop-category">
       <div className="shop-category-title">{category}'s Collection</div>
       <div className="shop-category-settings">
         <div className="shop-category-filter">
-          <button>Filter</button>
+          <button>
+            <i className="bx bx-filter-alt"></i> Filter
+          </button>
         </div>
         <div className="shop-category-settings-right">
           <div className="shop-category-count">
-            <p>36 products</p>
+            <p>
+              {sortedItems.length} of {sortedItems.length} products
+            </p>
           </div>
           <div className="shop-category-sort">
             <Dropdown
@@ -59,14 +71,10 @@ const ShopCategory = ({ category }) => {
 
       <div className="shop-category-products">
         {sortedItems.map((item, index) => {
-          if (category === item.category) {
-            return <Item key={index} item={item} />;
-          } else {
-            return null;
-          }
+          return <Item key={index} item={item} />;
         })}
       </div>
-      <div className="shop-category-loadmore">Explore More</div>
+      {/* <div className="shop-category-loadmore">Explore More</div> */}
     </div>
   );
 };
