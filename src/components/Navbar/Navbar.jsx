@@ -4,10 +4,12 @@ import { useState } from "react";
 import pineapple_icon from "../../assets/pineapple.svg";
 import { Link } from "react-router-dom";
 import Header from "../header/Header";
+import { useContext } from "react";
+import { ShopContext } from "../../context/ShopContext";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
-  //   const { getTotalCartItems } = useContext(ShopContext);
+  const { getTotalCartItems } = useContext(ShopContext);
 
   window.addEventListener("scroll", function () {
     const nav = this.document.querySelector(".navbar");
@@ -82,10 +84,10 @@ const Navbar = () => {
           </Link>
           <Link className="nav-icon" to="/cart">
             <i className="bx bx-cart"></i>{" "}
+            <div className="nav-cart-count">
+              <p>{getTotalCartItems()}</p>
+            </div>
           </Link>
-          <div className="nav-cart-count">
-            <p>{0}</p>
-          </div>
         </div>
       </div>
     </div>

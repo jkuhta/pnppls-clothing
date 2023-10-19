@@ -6,6 +6,7 @@ import Product from "./pages/product/Product";
 import ShopCategory from "./pages/shopCategory/ShopCategory";
 import Navbar from "./components/Navbar/Navbar";
 import Outlet from "./pages/outlet/Outlet";
+import Cart from "./pages/cart/Cart";
 
 function App() {
   return (
@@ -24,8 +25,8 @@ function App() {
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>
-          {/* <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<LoginSignup />} /> */}
+          <Route path="/cart" element={<Cart />} />
+          {/*  <Route path="/login" element={<LoginSignup />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

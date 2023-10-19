@@ -80,7 +80,11 @@ const ProductDisplay = (props) => {
           <div className="productdisplay-right-sizes">
             <Sizes selectedSize={selectedSize} handleSize={handleSize} />
           </div>
-          <button onClick={() => addToCart(product.id)}>Add to Cart</button>
+          <button
+            onClick={() => addToCart(product.id, selectedSize, selectedColor)}
+          >
+            Add to Cart
+          </button>
           <div className="pd-shipping-box">
             <div className="pd-shipping-line">
               <i class="pd-shipping-icon fa-solid fa-gift"></i>One free PNPPLS
