@@ -1,0 +1,37 @@
+.colors-box {
+  display: flex;
+  gap: 15px;
+}
+
+.colors-title {
+  margin-top: 2rem;
+  font-family: Poppins;
+}
+
+.colors-title span {
+  margin-top: 2rem;
+  font-family: Poppins;
+  font-weight: 400;
+}
+
+.color {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  content: "";
+}
+
+.color-circle {
+  border-radius: 50%;
+  padding: 3px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color-circle.active {
+  border: 2px solid #19191e;
+}
+
+.color-circle:hover {
+  border: 2px solid #19191e;
+}

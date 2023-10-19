@@ -1,0 +1,42 @@
+.sizes {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.sizes-title {
+  font-family: Poppins;
+}
+
+.sizes-box {
+  display: flex;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding: 18px 24px;
+  background: #fdf6e7;
+  border: 1px solid var(--container-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.size:hover {
+  background: #20655f;
+}
+.size.active {
+  background: #20655f;
+}
+
+.size.disabled {
+  background: lightgray;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}

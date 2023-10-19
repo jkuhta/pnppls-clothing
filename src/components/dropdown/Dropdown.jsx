@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Dropdown.css";
-import dropdown_icon from "../../assets/dropdown_icon.png";
 
 const Dropdown = ({ selectedItem, handleItemClick }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +42,7 @@ const Dropdown = ({ selectedItem, handleItemClick }) => {
           : selectedItem === "price_down"
           ? "Price: high to low"
           : "Featured"}{" "}
-        <img src={dropdown_icon} alt="" />
+        <i className="bx bx-sort-alt-2"></i>
       </button>
       {isOpen && (
         <ul className="dropdown-content">
