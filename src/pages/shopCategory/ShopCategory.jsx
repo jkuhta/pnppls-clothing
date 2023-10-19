@@ -13,7 +13,7 @@ const ShopCategory = ({ category }) => {
     (item) => item.category === category
   ); // Filter items by category
 
-  const [selectedItem, setSelectedItem] = useState("featured");
+  const [selectedItem, setSelectedItem] = useState("rating");
   const [sortedItems, setSortedItems] = useState(all_product);
 
   const handleItemClick = (item) => {

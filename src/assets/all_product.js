@@ -61,7 +61,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4.4,
     reviews: 70,
-    lables: [],
+    lables: ["sale"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -77,7 +77,7 @@ let all_product = [
     old_price: 100.95,
     rating: 4.5,
     reviews: 75,
-    lables: [],
+    lables: ["sale"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -365,7 +365,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -381,7 +381,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new"],
+    lables: ["sale"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -397,7 +397,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -445,7 +445,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["new", "sale"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -461,7 +461,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["new", "sale"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -493,7 +493,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -509,7 +509,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -525,7 +525,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -541,7 +541,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -557,7 +557,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -573,7 +573,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -589,7 +589,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },

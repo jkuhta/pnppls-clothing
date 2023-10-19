@@ -10,10 +10,10 @@ const Hero = () => {
           <h3>Designed For You</h3>
           <div className="hero-buttons">
             <Link className="hero-button" to="/womens">
-              <button>Women</button>
+              <button>Womens</button>
             </Link>
             <Link className="hero-button" to="/mens">
-              <button>Men</button>
+              <button>Mens</button>
             </Link>
           </div>
         </div>
