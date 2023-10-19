@@ -1,0 +1,65 @@
+.newsletter {
+  background-color: #f8aa27;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newsletter-title {
+  margin: auto;
+  color: #20655f;
+  font-family: "Young Serif";
+}
+.newsletter-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+
+  color: #20655f;
+  font-family: "Poppins";
+}
+.newsletter-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.newsletter-input {
+  height: 2rem;
+  width: 13rem;
+  padding: 0.5rem 1rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #20655f;
+  background-color: antiquewhite;
+  outline: none;
+}
+
+.newsletter-btn-box {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-btn {
+  justify-content: center;
+  background-color: #20655f;
+  color: white;
+  align-items: center;
+  margin: 1rem;
+  height: 2rem;
+  width: 31rem;
+  padding: 1rem 1rem 3rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #20655f;
+  outline: none;
+  cursor: pointer;
+}

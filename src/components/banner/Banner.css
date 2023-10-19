@@ -2,8 +2,43 @@
   background: url("../../assets/banner-1.jpg");
   background-size: cover;
   height: 25vw;
-  width: 75vw;
   margin: auto;
-  margin-top: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
   transform: rotateY(180deg);
+}
+
+.banner-text-box {
+  transform: rotateY(180deg);
+  display: block;
+  padding: 8rem;
+}
+
+.banner-title {
+  font-size: 3rem;
+  color: white;
+  font-family: "Young Serif";
+}
+
+.banner-subtitle {
+  font-size: 2rem;
+  color: white;
+}
+
+.banner-btn {
+  color: white;
+  font-family: "Young Serif";
+  font-size: 1rem;
+  background-color: #f8aa27;
+  display: inline;
+  border: none;
+  border-radius: 0.5rem;
+  width: 15rem;
+  height: 3rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.blabla {
+  text-decoration: none;
 }

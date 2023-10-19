@@ -2,8 +2,6 @@ import React from "react";
 import "./Stars.css";
 
 const Stars = ({ rating }) => {
-  console.log(rating);
-
   const renderStars = () => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {

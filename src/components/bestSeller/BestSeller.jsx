@@ -28,21 +28,7 @@ const BestSeller = ({ category }) => {
       <div className="bestSeller-items-container">
         <div className="bestSeller-items">
           {top4Items.map((item, index) => {
-            return (
-              item.category === category && (
-                <Item
-                  className="bestSeller-item"
-                  key={index}
-                  id={item.id}
-                  name={item.name}
-                  image={item.image}
-                  rating={item.rating}
-                  reviews={item.reviews}
-                  new_price={item.new_price}
-                  old_price={item.old_price}
-                ></Item>
-              )
-            );
+            return item.category === category && <Item item={item}></Item>;
           })}
         </div>
       </div>

@@ -3,20 +3,32 @@ import "./Item.css";
 import { Link } from "react-router-dom";
 import Stars from "../stars/Stars";
 
-const Item = (props) => {
+const Item = ({ item }) => {
   return (
     <div className="item">
-      <Link to={`/product/${props.id}`}>
-        <img src={props.image} alt="" onClick={window.scrollTo(0, 0)}></img>
+      <Link className="item-link" to={`/product/${item.id}`}>
+        <img
+          className="item-img"
+          src={item.image}
+          alt=""
+          onClick={window.scrollTo(0, 0)}
+        ></img>
+        <div className="item-labels">
+          {item.lables.map((label, index) => (
+            <label key={index} className={`item-label ${label}`}>
+              {label}
+            </label>
+          ))}
+        </div>
       </Link>
       <div className="item-description">
-        <p>{props.name}</p>
+        <p>{item.name}</p>
         <div className="rating">
-          <Stars rating={props.rating} />
-          <span>({props.reviews})</span>
+          <Stars rating={item.rating} />
+          <span>({item.reviews})</span>
         </div>
         <div className="item-prices">
-          <div className="item-price-new">€ {props.new_price}</div>
+          <div className="item-price-new">€ {item.new_price}</div>
         </div>
       </div>
     </div>

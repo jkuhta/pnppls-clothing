@@ -1,10 +1,47 @@
 .item {
-  width: 350px;
+  width: 370px;
+}
+
+.item-img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.item-link {
+  text-decoration: none;
+}
+
+.item-labels {
+  margin-top: -35px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.item-label {
+  padding: 6px;
+  background-color: white;
+  border-radius: 3px;
+  opacity: 90%;
+  color: black;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-right: 3px;
+  text-transform: uppercase;
+}
+
+.sale {
+  background-color: rgb(215, 76, 76);
+  color: white;
+}
+
+.recycled {
+  background-color: #3b5e2e;
+  color: white;
 }
 
 .item-description {
-  row-gap: 0.3rem;
   display: grid;
+  font-family: Poppins;
 }
 
 .item p {
@@ -14,7 +51,8 @@
 .item-prices {
   display: flex;
   gap: 20px;
-  color: #20655f;
+  color: black;
+  margin-top: 5px;
 }
 
 .item-price-new {
@@ -29,7 +67,7 @@
 }
 
 .item:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   transition: 0.6;
 }
 
