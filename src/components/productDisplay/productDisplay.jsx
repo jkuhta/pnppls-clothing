@@ -7,7 +7,6 @@ import { useState } from "react";
 import Sizes from "../sizes/Sizes";
 import Related from "../related/Related";
 import Review from "../review/Review";
-import Newsletter from "../newsletter/Newsletter";
 import Complete from "../complete/Complete";
 import OverView from "../overview/OverView";
 
@@ -118,9 +117,6 @@ const ProductDisplay = (props) => {
       </div>
       <div className="pd-related">
         <Related category={product.category} />
-      </div>
-      <div className="pd-newsletter">
-        <Newsletter />
       </div>
     </>
   );

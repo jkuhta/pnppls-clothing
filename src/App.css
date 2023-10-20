@@ -43,3 +43,7 @@
   cursor: pointer;
   transition: 0.3;
 }
+
+.link {
+  text-decoration: none;
+}

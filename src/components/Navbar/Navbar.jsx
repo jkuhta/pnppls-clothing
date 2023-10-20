@@ -48,11 +48,11 @@ const Navbar = () => {
       icon: "check-circle",
       name: "Story",
     },
-    {
-      id: "contact",
-      icon: "water",
-      name: "Contact",
-    },
+    // {
+    //   id: "contact",
+    //   icon: "water",
+    //   name: "Contact",
+    // },
   ];
 
   return (

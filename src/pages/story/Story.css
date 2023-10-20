@@ -1,0 +1,16 @@
+.story-bg-img {
+  background: url("../../assets/story.jpg");
+  height: 90vh;
+  background-size: cover;
+}
+
+.story-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-title {
+  margin-top: 10rem;
+  font-size: 3.5rem;
+}

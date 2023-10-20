@@ -8,6 +8,9 @@ import Navbar from "./components/Navbar/Navbar";
 import Outlet from "./pages/outlet/Outlet";
 import Cart from "./pages/cart/Cart";
 import Newsletter from "./components/newsletter/Newsletter";
+import Story from "./pages/story/Story";
+import SignUp from "./pages/signUp/SignUp";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
@@ -27,7 +30,9 @@ function App() {
             <Route path=":productId" element={<Product />} />
           </Route>
           <Route path="/cart" element={<Cart />} />
-          {/*  <Route path="/login" element={<LoginSignup />} /> */}
+          <Route path="/story" element={<Story />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Newsletter />
         <Footer />
