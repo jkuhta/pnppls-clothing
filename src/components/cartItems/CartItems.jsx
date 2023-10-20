@@ -20,6 +20,7 @@ const CartItems = () => {
     if (promoCode === "PINEAPPLES10") setPromoUsed(true);
     else setPromoUsed(false);
   };
+
   return (
     <div className="cartitems">
       {getTotalCartAmount() > 0 ? (
@@ -34,51 +35,72 @@ const CartItems = () => {
             <p>Total</p>
           </div>
           <hr />
-          {all_product.map((e) => {
-            if (cartItems[e.id] > 0) {
+          {cartItems
+            .filter((item) => item && typeof item === "object")
+            .map((e, index) => {
+              const product = all_product.find(
+                (product) => product.id === e.id
+              );
+
               return (
-                <div>
+                <div key={index}>
                   <div className="cartitems-format cartitems-format-main">
                     <img
                       className="cartitems-product-icon"
-                      src={e.image}
+                      src={product.image}
                       alt=""
                     />
-                    <p>{e.name}</p>
-                    <p>€ {e.new_price}</p>
-                    <p className="cart-size">M</p>
-                    <p>Blue</p>
+                    <p>{product.name}</p>
+                    <p>€ {product.new_price}</p>
+                    <p className="cart-size">{e.size}</p>
+                    <p>{e.color.name}</p>
                     <button className="cartitems-quantity-btn">
                       <div
                         className="cartitems-quantity cartitems-quantity-minus"
-                        onClick={() => removeFromCart(e.id)}
+                        onClick={() =>
+                          removeFromCart({
+                            id: e.id,
+                            size: e.size,
+                            color: e.color,
+                          })
+                        }
                       >
                         -
                       </div>
                       <div className="cartitems-quantity cartitem-quantity-number">
-                        {cartItems[e.id]}
+                        {e.quantity}
                       </div>
                       <div
                         className="cartitems-quantity cartitems-quantity-plus"
-                        onClick={() => addToCart(e.id)}
+                        onClick={() =>
+                          addToCart({
+                            id: e.id,
+                            size: e.size,
+                            color: e.color,
+                          })
+                        }
                       >
                         +
                       </div>
                     </button>
 
                     <p>
-                      <b>€ {(e.new_price * cartItems[e.id]).toFixed(2)}</b>
+                      <b>€ {(product.new_price * e.quantity).toFixed(2)}</b>
                     </p>
                     <i
                       className="fa-regular fa-trash-can cartitems-remove-item"
-                      onClick={() => removeFromCart(e.id)}
+                      onClick={() =>
+                        removeFromCart({
+                          id: e.id,
+                          size: e.size,
+                          color: e.color,
+                        })
+                      }
                     ></i>
                   </div>
                 </div>
               );
-            }
-            return null;
-          })}
+            })}
 
           <div className="cartitems-down">
             <div className="cartitems-total">
@@ -139,7 +161,7 @@ const CartItems = () => {
               </div>
               <div className="pd-shipping-box">
                 <div className="pd-shipping-line">
-                  <i class="pd-shipping-icon fa-solid fa-gift"></i>One free
+                  <i className="pd-shipping-icon fa-solid fa-gift"></i>One free
                   PNPPLS keychain per order
                 </div>
                 <div className="pd-shipping-line">

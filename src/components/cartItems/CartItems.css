@@ -39,6 +39,7 @@
 
 .cartitems-remove-item {
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .cartitems-quantity-btn {

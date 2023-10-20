@@ -21,7 +21,7 @@ const ProductDisplay = (props) => {
     setSelectedColor(color);
   };
 
-  const [selectedSize, setSelectedSize] = useState();
+  const [selectedSize, setSelectedSize] = useState("S");
 
   const handleSize = (size) => {
     setSelectedSize(size);
@@ -81,14 +81,20 @@ const ProductDisplay = (props) => {
             <Sizes selectedSize={selectedSize} handleSize={handleSize} />
           </div>
           <button
-            onClick={() => addToCart(product.id, selectedSize, selectedColor)}
+            onClick={() =>
+              addToCart({
+                id: product.id,
+                size: selectedSize,
+                color: selectedColor,
+              })
+            }
           >
             Add to Cart
           </button>
           <div className="pd-shipping-box">
             <div className="pd-shipping-line">
-              <i class="pd-shipping-icon fa-solid fa-gift"></i>One free PNPPLS
-              keychain per order
+              <i className="pd-shipping-icon fa-solid fa-gift"></i>One free
+              PNPPLS keychain per order
             </div>
             <div className="pd-shipping-line">
               <i className="pd-shipping-icon fa-solid fa-truck-fast"></i>Free
