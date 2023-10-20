@@ -7,6 +7,7 @@ import ShopCategory from "./pages/shopCategory/ShopCategory";
 import Navbar from "./components/Navbar/Navbar";
 import Outlet from "./pages/outlet/Outlet";
 import Cart from "./pages/cart/Cart";
+import Newsletter from "./components/newsletter/Newsletter";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           {/*  <Route path="/login" element={<LoginSignup />} /> */}
         </Routes>
+        <Newsletter />
         <Footer />
       </BrowserRouter>
     </div>

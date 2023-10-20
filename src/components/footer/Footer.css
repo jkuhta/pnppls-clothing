@@ -1,3 +1,131 @@
 .footer {
-  height: 40vh;
+  display: grid;
+  background-color: var(--container-color);
+  padding-top: 5rem;
+}
+
+.footer-content {
+  grid-template-columns: 2fr 4fr; /* 5 columns, 1st takes 2fr, others 1fr each */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 0;
+  padding-bottom: 5rem;
+}
+
+.footer-col-title {
+  margin-bottom: 2rem;
+}
+
+.footer-col-links {
+  display: grid;
+  grid-column: span 5; /* Spans all 5 columns */
+  width: 100%;
+  row-gap: 1rem;
+}
+
+.footer-col {
+  width: 100%;
+}
+
+.footer-col-link {
+  text-decoration: none;
+  color: grey;
+}
+
+.footer-right {
+  display: flex;
+}
+
+.footer-logo {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo-img {
+  color: #171717;
+  height: 6rem;
+}
+
+.footer-logo-text {
+  color: #171717;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Love Ya Like A Sister";
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.footer-left {
+  margin-right: 6rem;
+}
+
+.footer-col-p {
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.footer-social-icons {
+  font-size: 2.2rem;
+  color: var(--title-color);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-social-icons i {
+  cursor: pointer;
+}
+
+.footer-hr {
+  width: 100%;
+  height: 1px;
+  background: rgb(233, 233, 233);
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-terms {
+  display: flex;
+  column-gap: 20px;
+  justify-content: left;
+  align-items: center;
+  padding-left: 12rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  background-color: var(--container-color);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer-terms {
+  cursor: pointer;
+}
+
+.footer-terms hr {
+  width: 3px;
+  height: 3px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.footer-copyrights {
+  background-color: var(--title-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
 }
