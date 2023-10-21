@@ -7,9 +7,10 @@ import { useState } from "react";
 import Sizes from "../sizes/Sizes";
 import Related from "../related/Related";
 import Review from "../review/Review";
-import Newsletter from "../newsletter/Newsletter";
 import Complete from "../complete/Complete";
 import OverView from "../overview/OverView";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const ProductDisplay = (props) => {
   const { product } = props;
@@ -17,15 +18,29 @@ const ProductDisplay = (props) => {
 
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
 
+  // Create a ref to store the scroll position
+  const scrollPositionRef = useRef(null);
+
   const handleColor = (color) => {
     setSelectedColor(color);
+    scrollPositionRef.current = window.scrollY;
   };
 
-  const [selectedSize, setSelectedSize] = useState();
+  const [selectedSize, setSelectedSize] = useState("S");
 
   const handleSize = (size) => {
     setSelectedSize(size);
+    scrollPositionRef.current = window.scrollY;
   };
+
+  // Use an effect to scroll to the saved position
+  useEffect(() => {
+    if (scrollPositionRef.current !== null) {
+      window.scrollTo(0, scrollPositionRef.current);
+      // Clear the stored scroll position after using it
+      scrollPositionRef.current = null;
+    }
+  }, [selectedSize, selectedColor]);
 
   return (
     <>
@@ -80,11 +95,21 @@ const ProductDisplay = (props) => {
           <div className="productdisplay-right-sizes">
             <Sizes selectedSize={selectedSize} handleSize={handleSize} />
           </div>
-          <button onClick={() => addToCart(product.id)}>Add to Cart</button>
+          <button
+            onClick={() =>
+              addToCart({
+                id: product.id,
+                size: selectedSize,
+                color: selectedColor,
+              })
+            }
+          >
+            Add to Cart
+          </button>
           <div className="pd-shipping-box">
             <div className="pd-shipping-line">
-              <i class="pd-shipping-icon fa-solid fa-gift"></i>One free PNPPLS
-              keychain per order
+              <i className="pd-shipping-icon fa-solid fa-gift"></i>One free
+              PNPPLS keychain per order
             </div>
             <div className="pd-shipping-line">
               <i className="pd-shipping-icon fa-solid fa-truck-fast"></i>Free
@@ -108,9 +133,6 @@ const ProductDisplay = (props) => {
       </div>
       <div className="pd-related">
         <Related category={product.category} />
-      </div>
-      <div className="pd-newsletter">
-        <Newsletter />
       </div>
     </>
   );

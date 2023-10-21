@@ -1,9 +1,11 @@
 .item {
-  width: 370px;
+  width: 100%;
+  height: auto;
 }
 
 .item-img {
   width: 100%;
+  height: auto;
   border-radius: 3px;
 }
 
@@ -27,7 +29,6 @@
   font-weight: 500;
   margin-right: 3px;
   text-transform: uppercase;
-  font-family: Poppins;
   letter-spacing: 1px;
 }
 
@@ -43,7 +44,6 @@
 
 .item-description {
   display: grid;
-  font-family: Poppins;
 }
 
 .item p {
@@ -59,7 +59,7 @@
 
 .item-price-new {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .item-price-old {

@@ -3,7 +3,6 @@ import "./Home.css";
 import Hero from "../../components/hero/Hero";
 import BestSeller from "../../components/bestSeller/BestSeller";
 import Banner from "../../components/banner/Banner";
-import Newsletter from "../../components/newsletter/Newsletter";
 
 const Home = () => {
   return (
@@ -15,8 +14,9 @@ const Home = () => {
       <BestSeller category="accessories" />
 
       <Banner />
+      <BestSeller category="kids" />
 
-      <Newsletter />
+      <Banner />
     </div>
   );
 };

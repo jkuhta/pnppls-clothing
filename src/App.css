@@ -14,6 +14,7 @@
   color: var(--title-color);
   font-family: "Young Serif";
   display: inline;
+  text-transform: capitalize;
 }
 
 .section {
@@ -21,10 +22,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
+  padding-top: 4rem;
   margin-bottom: 2rem;
 }
 
 .pineapples {
   background: url("./assets/background.png");
+}
+
+.custom-button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #888;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 8rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3;
+}
+
+.link {
+  text-decoration: none;
 }

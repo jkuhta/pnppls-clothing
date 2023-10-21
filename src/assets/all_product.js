@@ -34,6 +34,10 @@ import p33_img from "./product_33.png";
 import p34_img from "./product_34.png";
 import p35_img from "./product_35.png";
 import p36_img from "./product_36.png";
+import p37_img from "./product_37.jpeg";
+import p38_img from "./product_38.webp";
+import p39_img from "./product_39.jpeg";
+import p40_img from "./product_40.jpeg";
 
 let all_product = [
   {
@@ -61,7 +65,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4.4,
     reviews: 70,
-    lables: [],
+    lables: ["sale"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -77,7 +81,7 @@ let all_product = [
     old_price: 100.95,
     rating: 4.5,
     reviews: 75,
-    lables: [],
+    lables: ["sale"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -326,7 +330,7 @@ let all_product = [
   },
   {
     id: 19,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Hoodie",
     category: "men",
     image: p19_img,
     new_price: 99.95,
@@ -342,7 +346,7 @@ let all_product = [
   },
   {
     id: 20,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Hoodie",
     category: "men",
     image: p20_img,
     new_price: 85.95,
@@ -358,14 +362,14 @@ let all_product = [
   },
   {
     id: 21,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jeans",
     category: "men",
     image: p21_img,
     new_price: 85.95,
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -374,14 +378,14 @@ let all_product = [
   },
   {
     id: 22,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Hoodie",
     category: "men",
     image: p22_img,
     new_price: 85.95,
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new"],
+    lables: ["sale"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -397,7 +401,7 @@ let all_product = [
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -423,7 +427,7 @@ let all_product = [
   {
     id: 25,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "accessories",
+    category: "kids",
     image: p25_img,
     new_price: 85.95,
     old_price: 120.95,
@@ -439,13 +443,13 @@ let all_product = [
   {
     id: 26,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "accessories",
+    category: "kids",
     image: p26_img,
     new_price: 85.95,
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["new", "sale"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -455,13 +459,13 @@ let all_product = [
   {
     id: 27,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "accessories",
+    category: "kids",
     image: p27_img,
     new_price: 85.95,
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["new", "sale"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -471,7 +475,7 @@ let all_product = [
   {
     id: 28,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "accessories",
+    category: "kids",
     image: p28_img,
     new_price: 85.95,
     old_price: 120.95,
@@ -487,13 +491,13 @@ let all_product = [
   {
     id: 29,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "accessories",
+    category: "kids",
     image: p29_img,
     new_price: 85.95,
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -503,13 +507,13 @@ let all_product = [
   {
     id: 30,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "accessories",
+    category: "kids",
     image: p30_img,
     new_price: 85.95,
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -519,13 +523,13 @@ let all_product = [
   {
     id: 31,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "accessories",
+    category: "kids",
     image: p31_img,
     new_price: 85.95,
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -535,13 +539,13 @@ let all_product = [
   {
     id: 32,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "accessories",
+    category: "kids",
     image: p32_img,
     new_price: 85.95,
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -551,13 +555,13 @@ let all_product = [
   {
     id: 33,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "accessories",
+    category: "kids",
     image: p33_img,
     new_price: 85.95,
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -567,13 +571,13 @@ let all_product = [
   {
     id: 34,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "accessories",
+    category: "kids",
     image: p34_img,
     new_price: 85.95,
     old_price: 120.95,
     rating: 4,
     reviews: 122,
-    lables: ["new", "recycled"],
+    lables: ["sale", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },
       { name: "Ocean Blue", hex: "#5c89ad" },
@@ -583,8 +587,24 @@ let all_product = [
   {
     id: 35,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    category: "accessories",
+    category: "kids",
     image: p35_img,
+    new_price: 85.95,
+    old_price: 120.95,
+    rating: 4,
+    reviews: 122,
+    lables: ["sale", "recycled"],
+    colors: [
+      { name: "Wooden Brown", hex: "#a66c29" },
+      { name: "Ocean Blue", hex: "#5c89ad" },
+      { name: "Forest Green", hex: "#3d8246" },
+    ],
+  },
+  {
+    id: 36,
+    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    category: "kids",
+    image: p36_img,
     new_price: 85.95,
     old_price: 120.95,
     rating: 4,
@@ -597,14 +617,62 @@ let all_product = [
     ],
   },
   {
-    id: 36,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    id: 37,
+    name: "Orange Colourblocked Beanie",
     category: "accessories",
-    image: p36_img,
-    new_price: 85.95,
-    old_price: 120.95,
+    image: p37_img,
+    new_price: 15.95,
+    old_price: 20.95,
     rating: 4,
-    reviews: 122,
+    reviews: 17,
+    lables: ["sale", "recycled"],
+    colors: [
+      { name: "Wooden Brown", hex: "#a66c29" },
+      { name: "Ocean Blue", hex: "#5c89ad" },
+      { name: "Forest Green", hex: "#3d8246" },
+    ],
+  },
+  {
+    id: 38,
+    name: "Blue Colourblocked Toat Bag",
+    category: "accessories",
+    image: p38_img,
+    new_price: 25.95,
+    old_price: 30.95,
+    rating: 4.5,
+    reviews: 80,
+    lables: ["new", "recycled"],
+    colors: [
+      { name: "Wooden Brown", hex: "#a66c29" },
+      { name: "Ocean Blue", hex: "#5c89ad" },
+      { name: "Forest Green", hex: "#3d8246" },
+    ],
+  },
+  {
+    id: 39,
+    name: "Orange Colourblocked Backpack",
+    category: "accessories",
+    image: p39_img,
+    new_price: 90.95,
+    old_price: 130.95,
+    rating: 5,
+    reviews: 105,
+    lables: ["sale"],
+    colors: [
+      { name: "Wooden Brown", hex: "#a66c29" },
+      { name: "Ocean Blue", hex: "#5c89ad" },
+      { name: "Forest Green", hex: "#3d8246" },
+    ],
+  },
+  {
+    id: 40,
+    name: "Wooden Beach Day Sunglasses",
+    category: "accessories",
+    image: p40_img,
+    new_price: 75.95,
+    old_price: 100.95,
+    rating: 4.5,
+    reviews: 129,
     lables: ["new", "recycled"],
     colors: [
       { name: "Wooden Brown", hex: "#a66c29" },

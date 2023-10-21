@@ -1,3 +1,8 @@
+.complete {
+  width: 80vw;
+  margin: auto;
+}
+
 .complete-category {
   display: flex;
   align-items: center;

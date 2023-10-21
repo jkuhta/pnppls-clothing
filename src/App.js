@@ -6,6 +6,11 @@ import Product from "./pages/product/Product";
 import ShopCategory from "./pages/shopCategory/ShopCategory";
 import Navbar from "./components/Navbar/Navbar";
 import Outlet from "./pages/outlet/Outlet";
+import Cart from "./pages/cart/Cart";
+import Newsletter from "./components/newsletter/Newsletter";
+import Story from "./pages/story/Story";
+import SignUp from "./pages/signUp/SignUp";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
@@ -16,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/men" element={<ShopCategory category="men" />} />
           <Route path="/women" element={<ShopCategory category="women" />} />
+          <Route path="/kids" element={<ShopCategory category="kids" />} />
           <Route
             path="/accessories"
             element={<ShopCategory category="accessories" />}
@@ -24,9 +30,12 @@ function App() {
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>
-          {/* <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<LoginSignup />} /> */}
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/story" element={<Story />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
+        <Newsletter />
         <Footer />
       </BrowserRouter>
     </div>

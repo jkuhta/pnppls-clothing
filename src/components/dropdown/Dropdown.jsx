@@ -58,7 +58,7 @@ const Dropdown = ({ selectedItem, handleItemClick }) => {
                 className={
                   item.id === selectedItem
                     ? "dropdown-check"
-                    : "dropdown-check hidden"
+                    : "dropdown-check hiddden"
                 }
               >
                 <i className="fa-solid fa-check"></i>

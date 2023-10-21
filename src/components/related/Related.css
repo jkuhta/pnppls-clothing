@@ -1,3 +1,8 @@
+.related {
+  width: 80vw;
+  margin: auto;
+}
+
 .related-category {
   display: flex;
   align-items: center;

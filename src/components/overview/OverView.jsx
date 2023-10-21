@@ -92,14 +92,14 @@ const OverView = () => {
             : "hidden"
         }
       >
-        <div class="table-wrap">
+        <div className="table-wrap">
           <table>
             <tbody>
               <tr>
                 <td className="table-head">
                   <strong>UK Size</strong>
                 </td>
-                <td className="table-head" colspan="2">
+                <td className="table-head" colSpan="2">
                   <strong>Chest</strong>
                 </td>
               </tr>
