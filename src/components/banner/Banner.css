@@ -1,17 +1,26 @@
 .banner {
-  background: url("../../assets/banner-1.jpg");
-  background-size: cover;
-  height: 25vw;
+  width: 85vw;
   margin: auto;
   margin-top: 3rem;
   margin-bottom: 4rem;
-  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+}
+
+.banner-img {
+  height: auto;
+  width: 85vw;
+  z-index: 0;
+  margin: auto;
 }
 
 .banner-text-box {
-  transform: rotateY(180deg);
   display: block;
+  position: absolute;
   padding: 8rem;
+  z-index: 1;
+  width: 40%;
+  margin-top: 4rem;
 }
 
 .banner-title {

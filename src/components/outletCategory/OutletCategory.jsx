@@ -91,7 +91,7 @@ const OutletCategory = ({ category, products }) => {
 
         <div className="outlet-products">{itemstoshow}</div>
         <div className="outlet-btn">
-          {showItems <= sortedItems.length ? (
+          {showItems < sortedItems.length ? (
             <button
               type="button"
               className="custom-button"
@@ -99,6 +99,8 @@ const OutletCategory = ({ category, products }) => {
             >
               Show More
             </button>
+          ) : sortedItems.length <= 4 ? (
+            ""
           ) : (
             "All results loaded."
           )}
