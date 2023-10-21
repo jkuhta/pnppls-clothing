@@ -1,9 +1,11 @@
 .item {
-  width: 370px;
+  width: 100%;
+  height: auto;
 }
 
 .item-img {
   width: 100%;
+  height: auto;
   border-radius: 3px;
 }
 

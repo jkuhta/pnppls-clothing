@@ -30,13 +30,19 @@
 
 .size:hover {
   background: #20655f;
+  color: white;
 }
 .size.active {
   background: #20655f;
+  color: white;
 }
 
 .size.disabled {
   background: lightgray;
   cursor: not-allowed;
   text-decoration: line-through;
+}
+
+.size.disabled:hover {
+  color: black;
 }

@@ -7,7 +7,7 @@ import OutletCategory from "../../components/outletCategory/OutletCategory";
 const Outlet = () => {
   const { all_product } = useContext(ShopContext);
 
-  const categories = ["men", "women", "accessories"];
+  const categories = ["men", "women", "accessories", "kids"];
 
   return (
     <div className="outlet pineapples">
