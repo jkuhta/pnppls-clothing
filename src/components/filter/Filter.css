@@ -1,0 +1,40 @@
+.filter {
+  display: flex;
+}
+.shop-category-filter-list {
+  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: var(--container-color);
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.shop-category-filter-item {
+  cursor: pointer;
+}
+
+.shop-category-filter button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #888;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 7rem;
+  justify-content: center;
+}
+
+.shop-category-active-filter {
+  color: var(--title-color);
+  font-weight: 600;
+}
