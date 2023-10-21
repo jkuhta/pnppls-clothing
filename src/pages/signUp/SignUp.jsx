@@ -145,6 +145,7 @@ const SignUp = () => {
               type="password"
               id="confirm_pwd"
               required
+              onChange={(e) => setMatchPwd(e.target.value)}
               aria-invalid={validMatch ? "false" : "true"}
               aria-describedby="confirmnote"
               placeholder="Confirm Password"
