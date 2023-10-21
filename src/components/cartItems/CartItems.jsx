@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./CartItems.css";
 import { ShopContext } from "../../context/ShopContext";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const CartItems = () => {
   const {
@@ -177,7 +178,20 @@ const CartItems = () => {
           </div>
         </div>
       ) : (
-        <div className="empty-cart">Your cart is empty.</div>
+        <div className="empty-cart">
+          <p>Your cart is empty.</p>
+          <Link to="/women">
+            <button className="custom-button cart-empty-button">
+              Shop Womens
+            </button>
+          </Link>
+          <Link to="/men">
+            {" "}
+            <button className="custom-button cart-empty-button">
+              Shop Mens
+            </button>
+          </Link>
+        </div>
       )}
     </div>
   );

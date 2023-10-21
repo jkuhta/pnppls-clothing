@@ -1,0 +1,11 @@
+.slogan {
+  background-color: #f8aa27;
+  opacity: 80%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-family: "Love Ya Like A Sister";
+  letter-spacing: 1.5rem;
+}

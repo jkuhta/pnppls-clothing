@@ -25,6 +25,7 @@ const OutletCategory = ({ category, products }) => {
 
   const handleSort = (sorted) => {
     setSortedItems(sorted);
+    scrollPositionRef.current = window.scrollY;
   };
 
   useEffect(() => {
@@ -60,7 +61,7 @@ const OutletCategory = ({ category, products }) => {
       // Clear the stored scroll position after using it
       scrollPositionRef.current = null;
     }
-  }, [showItems]);
+  }, [showItems, sortedItems]);
 
   return (
     <div className="outlet">

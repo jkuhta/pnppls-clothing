@@ -150,10 +150,20 @@
 }
 
 .empty-cart {
-  display: flex;
+  display: grid;
   justify-content: center;
-  height: 50vh;
   align-items: center;
+  row-gap: 1rem;
+}
+
+.empty-cart p {
+  margin-bottom: 1rem;
+}
+
+.cart-empty-button {
+  background-color: var(--title-color);
+  color: white;
+  width: 10rem;
 }
 
 .cartitems .pd-shipping-box {

@@ -9,6 +9,8 @@ import Related from "../related/Related";
 import Review from "../review/Review";
 import Complete from "../complete/Complete";
 import OverView from "../overview/OverView";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const ProductDisplay = (props) => {
   const { product } = props;
@@ -16,15 +18,29 @@ const ProductDisplay = (props) => {
 
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
 
+  // Create a ref to store the scroll position
+  const scrollPositionRef = useRef(null);
+
   const handleColor = (color) => {
     setSelectedColor(color);
+    scrollPositionRef.current = window.scrollY;
   };
 
   const [selectedSize, setSelectedSize] = useState("S");
 
   const handleSize = (size) => {
     setSelectedSize(size);
+    scrollPositionRef.current = window.scrollY;
   };
+
+  // Use an effect to scroll to the saved position
+  useEffect(() => {
+    if (scrollPositionRef.current !== null) {
+      window.scrollTo(0, scrollPositionRef.current);
+      // Clear the stored scroll position after using it
+      scrollPositionRef.current = null;
+    }
+  }, [selectedSize, selectedColor]);
 
   return (
     <>

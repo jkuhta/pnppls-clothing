@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import pineapple_icon from "../../assets/pineapple.svg";
+import pineapple from "../../assets/pineapple.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-left">
           <div>
             <Link className="footer-logo" to="/">
-              <img className="footer-logo-img" src={pineapple_icon} alt="" />
+              <img className="footer-logo-img" src={pineapple} alt="" />
               <p className="footer-logo-text">PNPPLS</p>
             </Link>
           </div>

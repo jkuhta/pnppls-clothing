@@ -46,7 +46,7 @@
   justify-content: center;
   text-decoration: none;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .footer-logo-img {
@@ -60,7 +60,8 @@
   font-weight: 600;
   font-family: "Love Ya Like A Sister";
   margin: 0;
-  margin-left: 1rem;
+  margin-top: 0.7rem;
+  margin-left: 0rem;
 }
 
 .footer-left {
