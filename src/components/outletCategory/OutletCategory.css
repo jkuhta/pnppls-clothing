@@ -53,6 +53,7 @@
 .outlet-btn button {
   background: var(--title-color);
   color: white;
+  margin-bottom: 2rem;
 }
 
 .outlet .hidden {

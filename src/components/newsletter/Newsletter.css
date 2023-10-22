@@ -93,7 +93,7 @@
 
 @media screen and (max-width: 760px) {
   .newsletter {
-    height: 40vh;
+    height: 45vh;
   }
 
   .newsletter-box {
@@ -115,7 +115,7 @@
 
 @media screen and (max-width: 500px) {
   .newsletter {
-    height: 34vh;
+    height: 40vh;
   }
 
   .newsletter-box {
@@ -127,7 +127,7 @@
 }
 @media screen and (max-width: 350px) {
   .newsletter {
-    height: 32vh;
+    height: 40vh;
   }
 
   .newsletter-box {
