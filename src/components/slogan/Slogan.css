@@ -9,3 +9,45 @@
   font-family: "Love Ya Like A Sister";
   letter-spacing: 1.5rem;
 }
+
+@media screen and (max-width: 1400px) {
+  .slogan {
+    letter-spacing: 1rem;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .slogan {
+    letter-spacing: 0.8rem;
+    padding: 1.2rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  .slogan {
+    letter-spacing: 0.7rem;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .slogan {
+    letter-spacing: 0.6rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .slogan {
+    letter-spacing: 0.4rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .slogan {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    display: flex;
+    text-align: center;
+    padding: 1rem;
+  }
+}

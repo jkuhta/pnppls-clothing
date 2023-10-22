@@ -33,15 +33,18 @@ const Dropdown = ({ selectedItem, handleItemClick }) => {
   return (
     <div className="dropdown">
       <button onClick={toggleMenu}>
-        {selectedItem === "featured"
-          ? "Featured"
-          : selectedItem === "reviews"
-          ? "Reviews"
-          : selectedItem === "price_up"
-          ? "Price: low to high"
-          : selectedItem === "price_down"
-          ? "Price: high to low"
-          : "Featured"}{" "}
+        <p className="dropdown-button-name">
+          {selectedItem === "featured"
+            ? "Featured"
+            : selectedItem === "reviews"
+            ? "Reviews"
+            : selectedItem === "price_up"
+            ? "Price: low to high"
+            : selectedItem === "price_down"
+            ? "Price: high to low"
+            : "Featured"}
+        </p>
+
         <i className="bx bx-sort-alt-2"></i>
       </button>
       {isOpen && (

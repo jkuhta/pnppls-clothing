@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./SignUp.css";
 import { Link } from "react-router-dom";
 
-const PWD_REGEX =
-  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,}$/;
+const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]*$/;
 
 const USER_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -126,8 +125,7 @@ const SignUp = () => {
             <p className="signup-tooltip-text">
               8 to 24 characters.
               <br />
-              Must include uppercase and lowercase letters, a number and a
-              special character.
+              Must include uppercase and lowercase letters and a number.
             </p>
             <span
               className={validMatch && matchPwd ? "valid signup-sign" : "hide"}

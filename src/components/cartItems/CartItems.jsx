@@ -26,83 +26,177 @@ const CartItems = () => {
     <div className="cartitems">
       {getTotalCartAmount() > 0 ? (
         <div>
-          <div className="cartitems-format-main">
-            <p>Product</p>
-            <p>Title</p>
-            <p>Price</p>
-            <p>Size</p>
-            <p>Color</p>
-            <p>Quantity</p>
-            <p>Total</p>
+          <div className="cartitems-up">
+            <div className="cartitems-up-main">
+              <div className="cartitems-format-main">
+                <p>Product</p>
+                <p>Title</p>
+                <p>Price</p>
+                <p>Size</p>
+                <p>Color</p>
+                <p>Quantity</p>
+                <p>Total</p>
+              </div>
+              <hr />
+              {cartItems
+                .filter((item) => item && typeof item === "object")
+                .map((e, index) => {
+                  const product = all_product.find(
+                    (product) => product.id === e.id
+                  );
+
+                  return (
+                    <div key={index}>
+                      <div className="cartitems-format cartitems-format-main">
+                        <img
+                          className="cartitems-product-icon"
+                          src={product.image}
+                          alt=""
+                        />
+                        <p>{product.name}</p>
+                        <p className="cartitem-price">€ {product.new_price}</p>
+                        <p className="cart-size">{e.size}</p>
+                        <p>{e.color.name}</p>
+                        <button className="cartitems-quantity-btn">
+                          <div
+                            className="cartitems-quantity cartitems-quantity-minus"
+                            onClick={() =>
+                              removeFromCart({
+                                id: e.id,
+                                size: e.size,
+                                color: e.color,
+                              })
+                            }
+                          >
+                            -
+                          </div>
+                          <div className="cartitems-quantity cartitem-quantity-number">
+                            {e.quantity}
+                          </div>
+                          <div
+                            className="cartitems-quantity cartitems-quantity-plus"
+                            onClick={() =>
+                              addToCart({
+                                id: e.id,
+                                size: e.size,
+                                color: e.color,
+                              })
+                            }
+                          >
+                            +
+                          </div>
+                        </button>
+
+                        <p>
+                          <b>€ {(product.new_price * e.quantity).toFixed(2)}</b>
+                        </p>
+                        <i
+                          className="fa-regular fa-trash-can cartitems-remove-item"
+                          onClick={() =>
+                            removeFromCart({
+                              id: e.id,
+                              size: e.size,
+                              color: e.color,
+                            })
+                          }
+                        ></i>
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
+            <div className="cartitems-up-small">
+              {cartItems
+                .filter((item) => item && typeof item === "object")
+                .map((e, index) => {
+                  const product = all_product.find(
+                    (product) => product.id === e.id
+                  );
+
+                  return (
+                    <div key={index}>
+                      <div className="cartitems-up-small-content">
+                        <img
+                          className="cartitems-up-small-img"
+                          src={product.image}
+                          alt=""
+                        />
+                        <div className="cartitems-up-small-description">
+                          <p>
+                            <b>{product.name}</b>
+                          </p>
+                          <div className="cartitems-up-small-description-info">
+                            <p className="cartitem-price">
+                              €{product.new_price}
+                            </p>
+                            <p>
+                              <b>Size: </b>
+                              <span style={{ fontSize: "1.2rem" }}>
+                                {e.size}
+                              </span>
+                            </p>
+                            <p>
+                              <b>Color: </b>
+                              {e.color.name}
+                            </p>
+                          </div>
+                          <button className="cartitems-quantity-btn">
+                            <div
+                              className="cartitems-quantity cartitems-quantity-minus"
+                              onClick={() =>
+                                removeFromCart({
+                                  id: e.id,
+                                  size: e.size,
+                                  color: e.color,
+                                })
+                              }
+                            >
+                              -
+                            </div>
+                            <div className="cartitems-quantity cartitem-quantity-number">
+                              {e.quantity}
+                            </div>
+                            <div
+                              className="cartitems-quantity cartitems-quantity-plus"
+                              onClick={() =>
+                                addToCart({
+                                  id: e.id,
+                                  size: e.size,
+                                  color: e.color,
+                                })
+                              }
+                            >
+                              +
+                            </div>
+                          </button>
+                        </div>
+                        <div className="cartitems-up-small-right">
+                          <div className="cartitems-up-small-right-total">
+                            <p>
+                              <b>
+                                €{(product.new_price * e.quantity).toFixed(2)}
+                              </b>
+                            </p>
+                          </div>
+                          <div className="cartitems-up-small-right-remove">
+                            <i
+                              className="fa-regular fa-trash-can cartitems-remove-item"
+                              onClick={() =>
+                                removeFromCart({
+                                  id: e.id,
+                                  size: e.size,
+                                  color: e.color,
+                                })
+                              }
+                            ></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
           </div>
-          <hr />
-          {cartItems
-            .filter((item) => item && typeof item === "object")
-            .map((e, index) => {
-              const product = all_product.find(
-                (product) => product.id === e.id
-              );
-
-              return (
-                <div key={index}>
-                  <div className="cartitems-format cartitems-format-main">
-                    <img
-                      className="cartitems-product-icon"
-                      src={product.image}
-                      alt=""
-                    />
-                    <p>{product.name}</p>
-                    <p>€ {product.new_price}</p>
-                    <p className="cart-size">{e.size}</p>
-                    <p>{e.color.name}</p>
-                    <button className="cartitems-quantity-btn">
-                      <div
-                        className="cartitems-quantity cartitems-quantity-minus"
-                        onClick={() =>
-                          removeFromCart({
-                            id: e.id,
-                            size: e.size,
-                            color: e.color,
-                          })
-                        }
-                      >
-                        -
-                      </div>
-                      <div className="cartitems-quantity cartitem-quantity-number">
-                        {e.quantity}
-                      </div>
-                      <div
-                        className="cartitems-quantity cartitems-quantity-plus"
-                        onClick={() =>
-                          addToCart({
-                            id: e.id,
-                            size: e.size,
-                            color: e.color,
-                          })
-                        }
-                      >
-                        +
-                      </div>
-                    </button>
-
-                    <p>
-                      <b>€ {(product.new_price * e.quantity).toFixed(2)}</b>
-                    </p>
-                    <i
-                      className="fa-regular fa-trash-can cartitems-remove-item"
-                      onClick={() =>
-                        removeFromCart({
-                          id: e.id,
-                          size: e.size,
-                          color: e.color,
-                        })
-                      }
-                    ></i>
-                  </div>
-                </div>
-              );
-            })}
-
           <div className="cartitems-down">
             <div className="cartitems-total">
               <h1>Summary</h1>

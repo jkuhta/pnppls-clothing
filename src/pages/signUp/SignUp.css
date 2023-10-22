@@ -125,3 +125,37 @@
   display: inline;
   color: red;
 }
+
+@media screen and (max-width: 1200px) {
+  .signup-container {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .signup-container {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 760px) {
+  .signup-container {
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .signup-container {
+    width: 90vw;
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 350px) {
+  .signup-container {
+    width: 90vw;
+    transform: scale(0.8);
+  }
+
+  .signup {
+    padding-top: 0rem;
+    padding-bottom: 0;
+  }
+}

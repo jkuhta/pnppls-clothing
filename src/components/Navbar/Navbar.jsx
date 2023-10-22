@@ -25,7 +25,14 @@ const Navbar = () => {
 
   const [showSearch, setShowSearch] = useState(false);
 
+  const [showSmallMenu, setShowSmallMenu] = useState(false);
+
   const handleSearchButton = () => {
+    if (showSearch) {
+      document.documentElement.classList.add("no-scroll");
+    } else {
+      document.documentElement.classList.remove("no-scroll");
+    }
     setShowSearch(!showSearch);
   };
 
@@ -68,44 +75,104 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="header-navbar">
-      <Header />
-      {(!showSearch && (
-        <div className="navbar">
-          <div className="navbar-main">
-            <div>
-              <Link className="nav-logo" to="/" onClick={() => setMenu("home")}>
-                <img className="nav-logo-img" src={pineapple_icon} alt="" />
-                <p className="nav-logo-text">PNPPLS</p>
-              </Link>
+    <div id="overlay" className={showSmallMenu ? "navbar-black" : ""}>
+      <div className="header-navbar">
+        <Header />
+        {(!showSearch && (
+          <div className="navbar">
+            <div className="navbar-main">
+              <div>
+                <Link
+                  className="nav-logo"
+                  to="/"
+                  onClick={() => setMenu("home")}
+                >
+                  <img className="nav-logo-img" src={pineapple_icon} alt="" />
+                  <p className="nav-logo-text">PNPPLS</p>
+                </Link>
+              </div>
+              <ul className="nav-menu">
+                {navItems.map((item, index) => (
+                  <li key={index} onClick={() => setMenu(item.id)}>
+                    <Link className="nav-item" to={`/${item.id}`}>
+                      {item.name}
+                    </Link>{" "}
+                    {menu === item.id ? <hr /> : <></>}
+                  </li>
+                ))}
+              </ul>
+              <div className="nav-icons">
+                <Link className="nav-icon" onClick={handleSearchButton}>
+                  <i className="bx bx-search"></i>
+                </Link>
+                <Link className="nav-icon" to="/signup">
+                  <i className="bx bx-user-circle"></i>
+                </Link>
+                <Link className="nav-icon" to="/cart">
+                  <i className="bx bx-cart"></i>{" "}
+                  <div className="nav-cart-count">
+                    <p>{getTotalCartItems()}</p>
+                  </div>
+                </Link>
+              </div>
             </div>
-            <ul className="nav-menu">
-              {navItems.map((item, index) => (
-                <li key={index} onClick={() => setMenu(item.id)}>
-                  <Link className="nav-item" to={`/${item.id}`}>
-                    {item.name}
-                  </Link>{" "}
-                  {menu === item.id ? <hr /> : <></>}
-                </li>
-              ))}
-            </ul>
-            <div className="nav-icons">
-              <Link className="nav-icon" onClick={handleSearchButton}>
-                <i className="bx bx-search"></i>
-              </Link>
-              <Link className="nav-icon" to="/signup">
-                <i className="bx bx-user-circle"></i>
-              </Link>
-              <Link className="nav-icon" to="/cart">
-                <i className="bx bx-cart"></i>{" "}
-                <div className="nav-cart-count">
-                  <p>{getTotalCartItems()}</p>
-                </div>
-              </Link>
+            <div className="navbar-small">
+              <div
+                className="nav-menu-icon nav-icon"
+                onClick={() => setShowSmallMenu(!showSmallMenu)}
+              >
+                <i className="fa-solid fa-bars"></i>
+              </div>
+              <div className="nav-logo-small">
+                <Link
+                  className="nav-logo"
+                  to="/"
+                  onClick={() => setMenu("home")}
+                >
+                  <img className="nav-logo-img" src={pineapple_icon} alt="" />
+                  <p className="nav-logo-text">PNPPLS</p>
+                </Link>
+              </div>
+              <div className="nav-icons">
+                <Link className="nav-icon" onClick={handleSearchButton}>
+                  <i className="bx bx-search"></i>
+                </Link>
+                <Link className="nav-icon " to="/signup">
+                  <i className="bx bx-user-circle nav-signup-icon"></i>
+                </Link>
+                <Link className="nav-icon" to="/cart">
+                  <i className="bx bx-cart"></i>{" "}
+                  <div className="nav-cart-count">
+                    <p>{getTotalCartItems()}</p>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div
+              className={
+                showSmallMenu ? "navbar-small-menu" : "navbar-small-menu hidden"
+              }
+            >
+              <ul className="nav-small-menu-list">
+                {navItems.map((item, index) => (
+                  <li
+                    key={index}
+                    onClick={() => setShowSmallMenu(!showSmallMenu)}
+                  >
+                    <Link
+                      className={`nav-small-item ${item.name}`}
+                      to={`/${item.id}`}
+                    >
+                      <div className="nav-small-item-name">{item.name}</div>
+                      <div className="nav-small-item-icon">{">"}</div>
+                    </Link>{" "}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-        </div>
-      )) || <Search handleSearchButton={handleSearchButton} />}
+        )) || <Search handleSearchButton={handleSearchButton} />}
+      </div>
     </div>
   );
 };

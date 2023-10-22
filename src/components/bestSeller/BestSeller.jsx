@@ -20,7 +20,7 @@ const BestSeller = ({ category }) => {
         <hr></hr>
       </div>
       <div className="bestSeller-all-btn-container">
-        <Link to={`/${category}`}>
+        <Link className="link" to={`/${category}`}>
           <button className="bestSeller-all-btn">Shop All</button>
         </Link>
       </div>

@@ -70,7 +70,7 @@ const Search = ({ handleSearchButton }) => {
                 {filteredProducts.map((item, index) => (
                   <div
                     key={index}
-                    className="search-item"
+                    className={`search-item search-${index}`}
                     onClick={handleSearchButton}
                   >
                     {" "}
