@@ -11,7 +11,7 @@
 .sizes-box {
   display: flex;
   width: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  flex-direction: row;
   gap: 5px;
 }
 
@@ -45,4 +45,15 @@
 
 .size.disabled:hover {
   color: black;
+}
+
+@media screen and (max-width: 400px) {
+  .sizes-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .size {
+    padding: 10px 0px;
+  }
 }

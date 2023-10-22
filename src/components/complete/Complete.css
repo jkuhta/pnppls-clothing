@@ -68,3 +68,40 @@
   opacity: 80%;
   transition: 0.3;
 }
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 1140px) {
+  .complete {
+    width: 95vw;
+  }
+
+  .complete-items {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .complete {
+    width: 90vw;
+  }
+
+  .complete-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .complete {
+    width: 98vw;
+  }
+
+  .complete-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin: 1rem;
+  }
+}

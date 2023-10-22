@@ -1,42 +1,39 @@
 .productdisplay {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 83vw;
   margin: auto;
   padding-bottom: 3rem;
 }
 
 .productdisplay-left {
-  display: flex;
-  justify-content: left;
-  gap: 17px;
-  width: 60vw;
+  display: grid;
+  grid-template-columns: 0.325fr 1fr;
+  gap: 15px;
+  width: 100%;
 }
 
 .productdisplay-img-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 10vw;
+  width: 100%;
+  row-gap: 0px;
 }
 
 .productdisplay-img-list img {
   border-radius: 4px;
-}
-
-.productdisplay-img {
-  border-radius: 4px;
-  width: 32vw;
+  width: 100%;
+  height: auto;
 }
 
 .productdisplay-main-img {
   width: 100%;
+  height: auto;
 }
 
 .productdisplay-right {
   margin: 0;
   display: flex;
   flex-direction: column;
-  margin-left: 4rem;
+  margin-left: 3rem;
 }
 
 .productdisplay-right h1 {
@@ -141,4 +138,74 @@
   padding: 5px;
   padding-right: 1rem;
   font-size: 1.3rem;
+}
+
+.productdisplay-img-list-2 {
+  width: 100%;
+  row-gap: 0px;
+  display: none;
+}
+
+@media screen and (max-width: 1140px) {
+  .productdisplay {
+    width: 90vw;
+    grid-template-columns: 0.9fr 1fr;
+    align-items: start;
+  }
+
+  .productdisplay-right {
+    margin-left: 2rem;
+  }
+
+  .productdisplay-left {
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+  }
+  .productdisplay-img-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .productdisplay-img-list {
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+  }
+
+  .productdisplay {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .productdisplay-main-img {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .productdisplay {
+    grid-template-columns: 1fr;
+  }
+
+  .productdisplay-img-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 5px;
+  }
+
+  .productdisplay-right {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .productdisplay-left {
+    width: 85%;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .productdisplay-right {
+    width: 85%;
+    margin: auto;
+  }
 }

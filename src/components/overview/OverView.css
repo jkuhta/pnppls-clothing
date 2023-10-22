@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   width: 18vw;
+  min-width: max-content;
   gap: 5px;
   padding-bottom: 1rem;
 }
@@ -20,6 +21,7 @@
   align-items: center;
   gap: 30px;
   width: 100%;
+  min-width: fit-content;
   padding: 12px 16px;
   background: white;
   border: none;
@@ -83,4 +85,30 @@ td {
   padding: 15px;
   text-align: center;
   border: 1px solid rgb(165, 165, 165);
+}
+
+@media screen and (max-width: 560px) {
+  .overview-overview-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 00px;
+    width: 90%;
+    margin-left: 1rem;
+  }
+  .overview-overview-left,
+  .overview-overview-right {
+    width: 100%;
+    padding-top: 0rem;
+  }
+
+  .overview-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    min-width: max-content;
+    gap: 5px;
+    padding-bottom: 1rem;
+  }
 }
