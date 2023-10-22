@@ -147,6 +147,11 @@
 @media screen and (max-width: 550px) {
   .search-results {
     grid-template-columns: 1fr 1fr;
+    width: 90vw;
+  }
+
+  .search-bar {
+    width: 90vw;
   }
 
   .search-2,
