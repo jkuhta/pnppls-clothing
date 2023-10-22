@@ -1,3 +1,7 @@
+.story {
+  overflow: visible;
+}
+
 .story-bg-img {
   background: url("../../assets/story.jpg");
   height: 76vh;
