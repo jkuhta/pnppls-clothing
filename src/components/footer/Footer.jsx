@@ -2,8 +2,63 @@ import React from "react";
 import "./Footer.css";
 import pineapple from "../../assets/pineapple.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Footer = () => {
+  const [showLinks, setShowLinks] = useState(Array(4).fill(false));
+
+  const toggleLinks = (index) => {
+    const updatedLinks = [...showLinks];
+    updatedLinks[index] = !updatedLinks[index];
+    setShowLinks(updatedLinks);
+  };
+
+  const footerLinks = [
+    {
+      title: "Womens",
+      links: [
+        "New Arrivals",
+        "Clothing",
+        "Accessories",
+        "Headwear",
+        "Footwear",
+        "Outlet",
+      ],
+    },
+    {
+      title: "Mens",
+      links: [
+        "New Arrivals",
+        "Clothing",
+        "Accessories",
+        "Headwear",
+        "Footwear",
+        "Outlet",
+      ],
+    },
+    {
+      title: "Explore",
+      links: [
+        "About Us",
+        "Responsibility",
+        "Journal",
+        "Reviews",
+        "Collective",
+        "Careers",
+      ],
+    },
+    {
+      title: "Support",
+      links: [
+        "Help Center",
+        "Delievery",
+        "Returns & Refunds",
+        "FAQ",
+        "Payments & Orders",
+        "Get In Touch",
+      ],
+    },
+  ];
   return (
     <div className="footer">
       <div className="footer-content">
@@ -28,50 +83,35 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-right">
-          <div className="footer-col">
-            <h3 className="footer-col-title">Womens</h3>
-            <div className="footer-col-links">
-              <Link className="footer-col-link">New Arrivals</Link>
-              <Link className="footer-col-link">Clothing</Link>
-              <Link className="footer-col-link">Accessories</Link>
-              <Link className="footer-col-link">Headwear</Link>
-              <Link className="footer-col-link">Footwear</Link>
-              <Link className="footer-col-link">Outlet</Link>
+          {footerLinks.map((col, index) => (
+            <div className="footer-col" key={index}>
+              <h3
+                className="footer-col-title"
+                onClick={() => toggleLinks(index)}
+              >
+                {col.title}
+              </h3>
+              <i
+                onClick={() => toggleLinks(index)}
+                className={` footer-small-icon ${
+                  showLinks[index]
+                    ? "fa-regular fa-minus"
+                    : "fa-regular fa-plus"
+                }`}
+              ></i>
+              <div
+                className={`footer-col-links ${
+                  showLinks[index] ? "" : "hidden"
+                }`}
+              >
+                {col.links.map((link, linkIndex) => (
+                  <Link className="footer-col-link" key={linkIndex}>
+                    {link}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="footer-col">
-            <h3 className="footer-col-title">Mens</h3>
-            <div className="footer-col-links">
-              <Link className="footer-col-link">New Arrivals</Link>
-              <Link className="footer-col-link">Clothing</Link>
-              <Link className="footer-col-link">Accessories</Link>
-              <Link className="footer-col-link">Headwear</Link>
-              <Link className="footer-col-link">Footwear</Link>
-              <Link className="footer-col-link">Outlet</Link>
-            </div>
-          </div>
-          <div className="footer-col">
-            <h3 className="footer-col-title">Explore</h3>
-            <div className="footer-col-links">
-              <Link className="footer-col-link">About Us</Link>
-              <Link className="footer-col-link">Responsibility</Link>
-              <Link className="footer-col-link">Journal</Link>
-              <Link className="footer-col-link">Reviews</Link>
-              <Link className="footer-col-link">Collective</Link>
-              <Link className="footer-col-link">Careers</Link>
-            </div>
-          </div>
-          <div className="footer-col">
-            <h3 className="footer-col-title">Help & Support</h3>
-            <div className="footer-col-links">
-              <Link className="footer-col-link">Help Center</Link>
-              <Link className="footer-col-link">Delievery</Link>
-              <Link className="footer-col-link">Returns & Refunds</Link>
-              <Link className="footer-col-link">FAQ</Link>
-              <Link className="footer-col-link">Payments & Orders</Link>
-              <Link className="footer-col-link">Get In Touch</Link>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       <hr className="footer-hr" />

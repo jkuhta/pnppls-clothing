@@ -63,3 +63,37 @@
   color: var(--subtitle-color);
   font-weight: 600;
 }
+
+@media screen and (max-width: 1200px) {
+  .login-container {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .login-container {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 760px) {
+  .login-container {
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .login-container {
+    width: 90vw;
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 350px) {
+  .login-container {
+    width: 90vw;
+    transform: scale(0.8);
+  }
+
+  .login {
+    padding-top: 0rem;
+    padding-bottom: 0;
+  }
+}
