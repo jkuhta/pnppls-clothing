@@ -52,7 +52,7 @@ const CartItems = () => {
                       alt=""
                     />
                     <p>{product.name}</p>
-                    <p>€ {product.new_price}</p>
+                    <p className="cartitem-price">€ {product.new_price}</p>
                     <p className="cart-size">{e.size}</p>
                     <p>{e.color.name}</p>
                     <button className="cartitems-quantity-btn">
