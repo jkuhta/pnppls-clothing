@@ -15,6 +15,7 @@
   font-family: "Young Serif";
   display: inline;
   text-transform: capitalize;
+  text-align: center;
 }
 
 .section {
@@ -46,4 +47,20 @@
 
 .link {
   text-decoration: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 2rem !important;
+  }
+
+  .section {
+    padding-top: 2rem;
+    padding-bottom: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
 }

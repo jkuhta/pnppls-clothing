@@ -7,7 +7,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1;
+  z-index: 10;
 }
 
 .navbar {
@@ -81,10 +81,15 @@
   color: black;
   font-size: 1.8rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-login-cart button:active {
   background: #f3f3f3;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .nav-cart-count {
@@ -104,4 +109,143 @@
 
 .scroll-header {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-small {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  z-index: 1000;
+}
+
+.navbar-small-menu {
+  display: none;
+  position: fixed;
+  left: 0;
+  background-color: white;
+  top: 0px;
+  margin-top: 60px;
+  height: 100%;
+  width: 40%;
+  z-index: -1;
+  padding-right: 1rem;
+  transition: left 0.5s; /* Add the same transition property */
+}
+
+.navbar-small-menu.hidden {
+  left: -50%;
+  transition: left 0.5s; /* Add the same transition property */
+}
+
+.nav-small-menu-list {
+  list-style-type: none;
+  margin-top: 2.9rem;
+}
+
+.navbar-black {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+.nav-small-item {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+  margin-right: 0.5rem;
+  align-items: center;
+}
+
+.nav-small-item:hover {
+  color: var(--title-color);
+}
+
+.nav-small-item-icon {
+  font-size: 1.5rem;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1140px) {
+  .nav-menu {
+    gap: 30px;
+    font-size: 1rem;
+  }
+
+  .nav-cart-count {
+    margin-left: 0.9rem;
+    margin-top: -2.3rem;
+  }
+
+  .nav-icon {
+    font-size: 1.5rem;
+  }
+
+  .nav-logo {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 844px) {
+  .header-navbar {
+    height: 92px;
+  }
+  .navbar {
+    height: 60px;
+  }
+  .navbar-small {
+    display: flex;
+  }
+
+  .navbar-main {
+    display: none;
+  }
+
+  .navbar-small-menu {
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navbar-small-menu {
+    width: 100%;
+  }
+
+  .nav-small-menu-list {
+    margin-right: 1rem;
+  }
+  .navbar-small-menu.hidden {
+    left: -120%;
+    transition: left 0.5s; /* Add the same transition property */
+  }
+
+  .nav-icon {
+    font-size: 1.3rem;
+  }
+
+  .nav-signup-icon {
+    display: none;
+  }
+
+  .nav-cart-count {
+    display: none;
+  }
+
+  .nav-icons {
+    gap: 0.3rem;
+  }
 }

@@ -42,7 +42,8 @@ const Filter = ({
   return (
     <div className="filter">
       <button onClick={() => setShowFilterMenu(!showFilterMenu)}>
-        <i className="bx bx-filter-alt"></i> Filter
+        <i className="bx bx-filter-alt"></i>{" "}
+        <p className="filter-button-name">Filter</p>
       </button>
       {showFilterMenu && (
         <form id="filter-form">

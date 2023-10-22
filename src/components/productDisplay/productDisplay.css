@@ -142,11 +142,3 @@
   padding-right: 1rem;
   font-size: 1.3rem;
 }
-
-/*=============== BREAKPOINTS ===============*/
-/* For large devices */
-@media screen and (max-width: 1140px) {
-  .services__container {
-    grid-template-columns: repeat(3, 218px);
-  }
-}

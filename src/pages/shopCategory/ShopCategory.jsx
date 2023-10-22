@@ -49,7 +49,9 @@ const ShopCategory = ({ category }) => {
 
   return (
     <div className="shop-category pineapples">
-      <div className="shop-category-title">{category}'s Collection</div>
+      <div className="shop-category-title section-title">
+        {category}'s Collection
+      </div>
       <div className="shop-category-settings">
         <div className="shop-category-filter">
           <Filter
@@ -61,12 +63,12 @@ const ShopCategory = ({ category }) => {
             category={category}
           />
         </div>
+        <div className="shop-category-count">
+          <p>
+            {filteredItems.length} of {category_products.length} products
+          </p>
+        </div>
         <div className="shop-category-settings-right">
-          <div className="shop-category-count">
-            <p>
-              {filteredItems.length} of {category_products.length} products
-            </p>
-          </div>
           <div className="shop-category-sort">
             <Dropdown
               selectedItem={selectedItem}

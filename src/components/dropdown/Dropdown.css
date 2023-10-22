@@ -1,6 +1,5 @@
 .dropdown {
-  position: relative;
-  display: inline-block;
+  display: flex;
 }
 
 .dropdown button {
@@ -11,8 +10,10 @@
   cursor: pointer;
   font-size: 1rem;
   display: flex;
+  justify-content: center;
   gap: 0.5rem;
   align-items: center;
+  height: 100%;
 }
 
 .dropdown-content {
@@ -23,6 +24,9 @@
   border-radius: 10px;
   border: 1px solid black;
   padding: 5px;
+  margin-right: 3rem;
+  margin-top: 3rem;
+  z-index: 100;
 }
 
 .dropdown-content li {
@@ -48,4 +52,17 @@
 
 .dropdown-content li:hover {
   background-color: #e28282;
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown button {
+    width: 2rem;
+  }
+  .dropdown-button-name {
+    display: none;
+  }
+
+  .dropdown-content {
+    margin-left: -11rem;
+  }
 }

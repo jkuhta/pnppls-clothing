@@ -67,20 +67,21 @@ const OutletCategory = ({ category, products }) => {
     <div className="outlet">
       <div className="section">
         <div className="outlet-title section-title">{category}'s Outlet</div>
-        <div className="outlet-settings">
-          <div className="outlet-filter">
+        <div className="shop-category-settings">
+          <div className="shop-category-filter">
             <button>
-              <i className="bx bx-filter-alt"></i> Filter
+              <i className="bx bx-filter-alt"></i>{" "}
+              <p className="filter-button-name">Filter</p>
             </button>
           </div>
-          <div className="outlet-settings-right">
-            <div className="outlet-count">
-              <p>
-                {sortedItems.slice(0, showItems).length} of {sortedItems.length}{" "}
-                products
-              </p>
-            </div>
-            <div className="outlet-sort">
+          <div className="shop-category-count">
+            <p>
+              {sortedItems.slice(0, showItems).length} of {sortedItems.length}{" "}
+              products
+            </p>
+          </div>
+          <div className="shop-category-settings-right">
+            <div className="shop-category-sort">
               <Dropdown
                 selectedItem={selectedItem}
                 handleItemClick={handleItemClick}
