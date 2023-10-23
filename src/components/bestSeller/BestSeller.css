@@ -39,20 +39,19 @@
 }
 
 .bestSeller-items-container {
-  overflow: hidden;
+  width: 100%; /* Adjust the width as needed */
+  overflow-x: scroll;
 }
 
 .bestSeller-items {
   margin-top: 40px;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   margin: 2rem;
 }
 
 .bestSeller-item {
-  margin-top: 40px;
-  display: flex;
-  gap: 30px;
+  flex: 0 0 calc(25% - 20px); /* 25% is for 4 items, adjust the gap value */
 }
 
 .bestSeller-all-btn-container {
@@ -84,11 +83,57 @@
   transition: 0.3;
 }
 
+.bestSeller-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  background-color: #f8aa27;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.arrow.disabled {
+  cursor: no-drop;
+}
+
+.arrow:hover {
+  background-color: #e69121;
+}
+
+.item-count {
+  font-size: 1.2rem;
+  color: #20655f;
+  margin: 0 10px;
+}
+
+/* FontAwesome icons styling (assuming you are using FontAwesome icons) */
+.fa-chevron-left,
+.fa-chevron-right {
+  color: white;
+  font-size: 18px;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 1140px) {
   .bestSeller {
     width: 95vw;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .bestSeller-item {
+    flex: 0 0 calc(30% - 20px); /* 25% is for 4 items, adjust the gap value */
   }
 }
 @media screen and (max-width: 768px) {
@@ -97,10 +142,12 @@
   }
 
   .bestSeller-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin: 1rem;
+  }
+
+  .bestSeller-item {
+    flex: 0 0 calc(40% - 20px); /* 25% is for 4 items, adjust the gap value */
   }
 }
 @media screen and (max-width: 450px) {
@@ -135,10 +182,25 @@
     text-decoration: none;
     font-size: 0.9rem;
   }
+
+  .bestSeller-item {
+    flex: 0 0 calc(50% - 20px); /* 25% is for 4 items, adjust the gap value */
+  }
+
+  .arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .fa-chevron-left,
+  .fa-chevron-right {
+    color: white;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 380px) {
-  .bestSeller-items {
-    grid-template-columns: 1fr !important;
+  .bestSeller-item {
+    flex: 0 0 calc(80% - 20px); /* 25% is for 4 items, adjust the gap value */
   }
 }
