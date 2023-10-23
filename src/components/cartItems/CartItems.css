@@ -199,7 +199,7 @@
 }
 
 .cartitems-up-small-content {
-  display: grid;
+  display: none;
   width: 100%;
   grid-template-columns: 2fr 4fr 1fr;
   gap: 1.5rem;
@@ -260,6 +260,10 @@
 
   .cartitems-up-main {
     display: none;
+  }
+
+  .cartitems-up-small-content {
+    display: grid;
   }
 }
 
