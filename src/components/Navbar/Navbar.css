@@ -131,7 +131,6 @@
   height: 100%;
   width: 40%;
   z-index: -1;
-  padding-right: 1rem;
   transition: left 0.5s; /* Add the same transition property */
 }
 
@@ -143,6 +142,7 @@
 .nav-small-menu-list {
   list-style-type: none;
   margin-top: 2.9rem;
+  padding-right: 1rem;
 }
 
 .navbar-black {
@@ -178,6 +178,26 @@
 
 .no-scroll {
   overflow: hidden;
+}
+
+.nav-small-login-container {
+  background-color: var(--container-color);
+}
+
+.nav-small-login {
+  margin-left: 2rem;
+  padding-top: 2rem;
+}
+
+.nav-icon-login {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem !important;
+}
+
+.nav-icon-login span {
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1140px) {

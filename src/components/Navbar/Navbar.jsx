@@ -169,6 +169,17 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
+              <div className="nav-small-login-container">
+                <div className="nav-small-login">
+                  <Link
+                    className="nav-icon nav-icon-login"
+                    to="/login"
+                    onClick={() => setShowSmallMenu(!showSmallMenu)}
+                  >
+                    <i className="bx bx-user-circle"></i> <span>Log In</span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         )) || <Search handleSearchButton={handleSearchButton} />}
